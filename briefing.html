@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>WBL &mdash; Briefing</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="src/reset.css" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="src/basicLightbox.min.css">
+
+    <style>
+    .canvas{
+        width: 700px;
+        margin: 0 auto;
+        padding: 40px !important;
+        margin-top: 50px;
+
+        margin-bottom: 100px;
+    }
+
+    p:last-child{
+        margin-bottom: 0px;
+    }
+
+    h1{
+        margin-top: 0px;
+    }
+
+    .thumb-gallery{
+      display: flex;
+      flex-flow: wrap;
+      flex-wrap: nowrap;
+      margin-top: 20px;
+      background-color: #ffffff;
+      padding: 30px;
+      padding-bottom: 24px;
+      box-shadow: inset 0 0 20px rgba(0,0,0,.05);
+      border-radius: 2px;
+    }
+
+    .thumbnail-item{
+      /* border: 1px solid red; */
+      flex: 1;
+      margin: 0px 20px;
+      /* transition: transform .5s ease-in-out; */
+    }
+
+    .thumbnail-item img:hover{
+      transform: translateY(-10px);
+      box-shadow: 0px 20px 40px rgba(0,0,0,.15);
+      cursor: pointer;
+    }
+
+    .thumbnail-item:first-child{
+      margin-left: 0px;
+    }
+
+    .thumbnail-item:last-child{
+      margin-right: 0px;
+    }
+
+    .thumbnail-item img{
+      max-width: 100%;
+      box-shadow: 0px 2px 20px rgba(0,0,0,.1);
+      transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+      border-radius: 2px;
+    }
+
+    .thumbnail-caption{
+      text-align: center;
+      opacity: .5;
+      margin-top: 10px;
+    }
+
+    .column span{
+      /* font-style: italic; */
+      color: var(--dark-blue);
+      text-decoration: underline;
+    }
+    </style>
+
+
+    <link rel="icon" type="image/ico" href="https://arthurgeel.com/favicon.png" />
+  </head>
+
+    <div class="canvas">
+
+        <div class="column" style="padding-left:50px">
+
+        <h2>Company Name:</h2>
+        <p>Woensel Brewing Labs&trade;</p>
+
+        <h2>Company Description:</h2>
+        <p>We are an Eindhoven-based start-up that brews and distributes special beers. We are proud to produce our beers using local materials, which yields the highly distinctive palette of flavours. Our target audience is <span>men aged 25 to 55</span>. We want to convey a sense of old-school craftsmanship, while maintaining a modern feel.</p>
+
+        <h2>Job Description:</h2>
+        <p>We ask you to create rough, 'wireframe-style' sketches for a website that showcases our three best beers: Woensel Blond&trade;, Woensel Dubbel&trade; and Woensel IPA&trade;. The goal is to provide a compelling user experience. The landing page should offer information on the beers, an option to purchase them and a 'Contact Us' section for customer service.</p>
+
+        <h2>Deadline:</h2>
+        <p>We would like to receive 'wireframe-style' sketches later today.</p>
+
+        <h2>Our Products:</h2>
+
+        <div class="thumb-gallery">
+          <div class="thumbnail-item">
+            <img class="first-item" src="i/beer-mockup-blond-thumb.jpg"></img>
+            <p class="thumbnail-caption">Woensel Blond&trade;</p>
+          </div>
+          <div class="thumbnail-item">
+            <img class="second-item" src="i/beer-mockup-dubbel-thumb.jpg"></img>
+            <p class="thumbnail-caption second">Woensel Dubbel&trade;</p>
+          </div>
+          <div class="thumbnail-item">
+            <img class="third-item" src="i/beer-mockup-ipa-thumb.jpg"></img>
+            <p class="thumbnail-caption third">Woensel IPA&trade;</p>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="src/basicLightbox.min.js"></script>
+
+    <script>
+    document.querySelector('img.first-item').onclick = () => {
+
+      basicLightbox.create(`
+    		<img width="1000" height="667" style="max-width: 100%" src="i/beer-mockup-blond.jpg">
+        <p style="text-align: center; color: #fff; margin-top: 20px;">Woensel Blond&trade; &mdash; A crisp pale ale, brewed from pilsner malt.</p>
+    	`).show()
+
+    }
+
+    document.querySelector('img.second-item').onclick = () => {
+
+    	basicLightbox.create(`
+    		<img width="1000" height="667" src="i/beer-mockup-dubbel.jpg">
+        <p style="text-align: center; color: #fff; margin-top: 20px;">Woensel Dubbel&trade; &mdash; A dark brown ale, brewed with coriander and black pepper.</p>
+    	`).show()
+
+    }
+
+    document.querySelector('img.third-item').onclick = () => {
+
+      basicLightbox.create(`
+    		<img width="1000" height="667" src="i/beer-mockup-ipa.jpg">
+        <p style="text-align: center; color: #fff; margin-top: 20px;">Woensel IPA&trade; &mdash; A hoppy, pale ale, brewed from citrusy- and floral hops.</p>
+    	`).show()
+
+    }
+
+    </script>
+
+  </body>
+
+</html>

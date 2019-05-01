@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>WBL &mdash; Persona</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="src/reset.css" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="src/basicLightbox.min.css">
+
+
+    <link rel="icon" type="image/ico" href="https://arthurgeel.com/favicon.png" />
+  </head>
+
+    <div class="canvas">
+        <div class="column profile-overview">
+            <!-- <img class="profile-picture" src="https://via.placeholder.com/1000/FFFFFF/1D5BA3?Text=Persona"></img> -->
+            <img class="profile-picture" src="i/profile-picture-lucas.jpg"></img>
+            <h1>"The Cautious Connaisseur"</h1>
+
+            <h2>Lucas van Summeren</h2>
+            <h2>Content Strategist, Full-time</h2>
+
+            <p>Age: 26</p>
+            <p>Location: Breda, the Netherlands</p>
+        </div>
+        <div class="column">
+            <div class="quote">I'm looking to join the right company that challenges me and allows me to grow and develop my skills.</div>
+            <h2>About Lucas</h2>
+            <p>Lucas has a <a href="#!" class="audio-proof">busy schedule</a>. Between his nine-to-five job and the ongoing renovations in his house, he does not have a lot of free time to work with. He won't settle for a job with a company that isn't as innovative and cutting edge as she believes she deserves. She wants to get the most out of every professional experience, and before moving to a new position, Rosa investigates every angle of aligning herself with a company.</p>
+
+            <h2>Behavioural Considerations</h2>
+            <ul>
+                <li>Expects the site experience to reflect the business's culture and values.</li>
+                <li>Interested in career opportunities within the organization that fit her career goals</li>
+                <li>Thoroughly compares multiple companies with similar opportunities.</li>
+                <li>Is interested in the unique benefit of working at a company, including cultural elements, mentoring programs, and continuing education policies.</li>
+                <li>Expects the site experience to reflect the business's culture and values.</li>
+            </ul>
+        </div>
+        <div class="column">
+            <div class="quote">I crave variety in the types of industries and goals of each content project I work on. I need to ensure I won't get bored.</div>
+            <h2>Frustrations</h2>
+            <ul>
+                <li>Thinks that too many companies have career sections that just talk about open positions but not why she would actually want to work there.</li>
+                <li>Would like to challenge herself and have a more stable job, but is comfortable as a freelancer and wouldn't stop for just any job.</li>
+            </ul>
+
+            <h2>Goals</h2>
+            <ul>
+                <li>Needs to see reasons why a company is interesting: has it won awards, had intense growth, won big contracts?</li>
+                <li>Wants to figure out how to get in touch with someone at the company to explore opportunities further.</li>
+            </ul>
+
+            <h2>Tasks</h2>
+            <ul>
+                <li>Learn about WBL's products and pricing.</li>
+                <li>Read press releases about recent big contract wins and other accolades.</li>
+                <li>Read about culture, benefits and perks, and the people that work there.</li>
+                <li>View job openings and apply.</li>
+            </ul>
+
+        </div>
+    </div>
+
+
+  </body>
+
+
+<script src="src/basicLightbox.min.js"></script>
+<script>
+document.querySelector('img.profile-picture').onclick = () => {
+    basicLightbox.create(`
+    <video controls data-id="2">
+        <source src="https://www.youtube.com/watch?v=IQcYCYSaLe4" type="video/mp4">
+    </video>
+    `).show()
+}
+
+document.querySelector('a.audio-proof').onclick = () => {
+    basicLightbox.create(`
+    <video controls data-id="2">
+        <source src="https://www.youtube.com/watch?v=IQcYCYSaLe4" type="video/mp4">
+    </video>
+    `).show()
+}
+
+</script>
+
+</html>
