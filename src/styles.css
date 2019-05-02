@@ -63,6 +63,7 @@ body{
 
 .profile-overview h2{
   font-size: 15px;
+  color: var(--dark-blue);
 }
 
 .profile-picture{
@@ -92,7 +93,7 @@ h2{
   margin-bottom: 10px;
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--dark-blue);
+  color: var(--deep-blue);
   letter-spacing: 1.05px;
 }
 

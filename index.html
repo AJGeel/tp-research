@@ -28,21 +28,20 @@
             <p>Location: Breda, the Netherlands</p>
         </div>
         <div class="column">
-            <div class="quote">I'm looking to join the right company that challenges me and allows me to grow and develop my skills.</div>
+            <div class="quote" style="margin-bottom: 20px;">I don't have a lot of opportunities to try different brews.. So when I buy something, it better be good.</div>
+            <div class="quote">I crave variety in the types of industries and goals of each content project I work on. I need to ensure I won't get bored.</div>
+
             <h2>About Lucas</h2>
-            <p>Lucas has a <a href="#!" class="audio-proof">busy schedule</a>. Between his nine-to-five job and the ongoing renovations in his house, he does not have a lot of free time to work with. He won't settle for a job with a company that isn't as innovative and cutting edge as she believes she deserves. She wants to get the most out of every professional experience, and before moving to a new position, Rosa investigates every angle of aligning herself with a company.</p>
+            <p>Lucas has a <a href="#!" class="audio-proof">busy life</a>. Between his nine-to-five job and the ongoing renovations in his house, he does not have a lot of free time to work with. He won't settle for beers that simply are 'okay' or ones he has drank plenty of times &mdash; he's actively searching for fresh, new ales to try.</p>
 
             <h2>Behavioural Considerations</h2>
             <ul>
                 <li>Expects the site experience to reflect the business's culture and values.</li>
                 <li>Interested in career opportunities within the organization that fit her career goals</li>
-                <li>Thoroughly compares multiple companies with similar opportunities.</li>
-                <li>Is interested in the unique benefit of working at a company, including cultural elements, mentoring programs, and continuing education policies.</li>
-                <li>Expects the site experience to reflect the business's culture and values.</li>
+                <li>Thoroughly compares multiple breweries with similar products.</li>
             </ul>
         </div>
         <div class="column">
-            <div class="quote">I crave variety in the types of industries and goals of each content project I work on. I need to ensure I won't get bored.</div>
             <h2>Frustrations</h2>
             <ul>
                 <li>Thinks that too many companies have career sections that just talk about open positions but not why she would actually want to work there.</li>
@@ -57,7 +56,7 @@
 
             <h2>Tasks</h2>
             <ul>
-                <li>Learn about WBL's products and pricing.</li>
+                <li>Explore different beers and their pricing.</li>
                 <li>Read press releases about recent big contract wins and other accolades.</li>
                 <li>Read about culture, benefits and perks, and the people that work there.</li>
                 <li>View job openings and apply.</li>
@@ -71,6 +70,7 @@
 
 
 <script src="src/basicLightbox.min.js"></script>
+
 <script>
 document.querySelector('img.profile-picture').onclick = () => {
     basicLightbox.create(`
@@ -87,6 +87,17 @@ document.querySelector('a.audio-proof').onclick = () => {
     </video>
     `).show()
 }
+
+document.addEventListener("keypress", function(event) {
+// console.log(event.keyCode);
+if (event.keyCode == 65 || event.keyCode == 97) {
+  console.log("$DEBUG — Going to previous page");
+  window.open("briefing.html", target="_self");
+} else if (event.keyCode == 83 || event.keyCode == 115) {
+  console.log("$DEBUG — Going to next page");
+  window.open("briefing.html", target="_self");
+}
+});
 
 </script>
 

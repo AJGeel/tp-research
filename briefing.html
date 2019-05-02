@@ -102,7 +102,7 @@
         <h2>Deadline:</h2>
         <p>We would like to receive 'wireframe-style' sketches later today.</p>
 
-        <h2>Our Products:</h2>
+        <h2>Some of Our Products:</h2>
 
         <div class="thumb-gallery">
           <div class="thumbnail-item">
@@ -150,6 +150,22 @@
     	`).show()
 
     }
+
+  /* Defined keys:
+  A: 65 or 97
+  S: 83 or 115
+  */
+
+  document.addEventListener("keypress", function(event) {
+  // console.log(event.keyCode);
+  if (event.keyCode == 65 || event.keyCode == 97) {
+    console.log("Going to previous page");
+    window.open("index.html", target="_self");
+  } else if (event.keyCode == 83 || event.keyCode == 115) {
+    console.log("Going to next page");
+    window.open("index.html", target="_self");
+  }
+});
 
     </script>
 
