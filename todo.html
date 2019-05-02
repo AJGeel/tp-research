@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>TO DO LOG</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="src/reset.css" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="src/basicLightbox.min.css">
+
+    <style>
+    .list-boards{
+      max-width: 1000px;
+      display: flex;
+      margin: 0 auto;
+    }
+
+    .list{
+      flex: 1;
+      background-color: #fff;
+      margin-top: 50px;
+      padding: 50px;
+      border-radius: 5px;
+      box-shadow: 0px 10px 25px rgba(0,0,0,.05);
+    }
+
+    .list:last-child{
+      margin-left: 100px;
+    }
+
+    .list p{
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    ul{
+      transition: all .5s ease-in-out;
+    }
+
+    ul .x{
+      text-decoration: line-through;
+      opacity: .3;
+    }
+
+    .list-boards{
+      animation: fade-in-canvas 1s cubic-bezier(0,.25,.25,1);
+    }
+    </style>
+
+
+    <link rel="icon" type="image/ico" href="https://arthurgeel.com/favicon.png" />
+  </head>
+
+  <body>
+    <div class="list-boards">
+
+      <div class="list">
+        <h2>To Do List</h2>
+
+        <ul>
+          <li class="clickable x">Update persona content with real data</li>
+          <li class="clickable">Video interview with 'Lucas'</li>
+          <li class="clickable">Implement video segments</li>
+          <li class="clickable">Add in audio segments</li>
+        </ul>
+      </div>
+
+      <div class="list">
+        <h2>Feature Idea Board</h2>
+
+        <p>With the research platform, you can:</p>
+        <ul>
+          <li>Receive (unprompted) messages from the persona;</li>
+          <li>See the persona over time and/or in different contexts;</li>
+          <li>Schedule a meeting in real life;</li>
+          <li>Make a video call;</li>
+          <li>Have rich user data that truly empathises those who experience it. Going WAY beyond reports, personas and videos;</li>
+
+        </ul>
+      </div>
+
+    </div>
+
+
+
+  </body>
+
+
+  <script>
+
+  var clickableLi = document.querySelector('.clickable');
+
+  clickableLi.addEventListener("click", function(){
+    console.log('li was clicked.');
+    this.classList.toggle('x');
+  });
+
+  </script>
+
+</html>
