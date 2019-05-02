@@ -146,3 +146,8 @@ ul li::before{
   0%    { transform: translateY(50px) scale(.9); opacity: 0; }
   100%  { transform: translateY(0px) scale(1)   ; opacity: 1; }
 }
+
+@keyframes fade-in-text{
+  0%    { transform: translateY(100px) scale(.9); opacity: 0;}
+  100%  { transform: translateY(0px) scale(1)   ; opacity: .3;}
+}
