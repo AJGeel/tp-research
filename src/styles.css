@@ -71,7 +71,6 @@ body{
   max-width: 70%;
   max-height: 70%;
   box-shadow: 0px 10px 25px rgba(0,0,0,.1);
-
   transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
 }
 
@@ -104,6 +103,13 @@ h2{
   font-size: 18px;
   margin-bottom: 40px;
   line-height: 130%;
+  transition: opacity .3s ease-in-out;
+}
+
+.quote:hover{
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: .7;
 }
 
 .quote:before{
@@ -140,6 +146,30 @@ ul li::before{
   width: 1em;
   margin-left: -1em;
   opacity: 1;
+}
+
+.audible img{
+  /* border: 1px solid red; */
+  width: 16px;
+  padding-left: 2px;
+  transform: translateY(2px);
+}
+
+p a{
+  text-decoration: none;
+}
+
+p a:hover{
+  text-decoration: underline;
+  opacity: .7;
+}
+
+p .audible img{
+  width: 12px;
+  padding-left: 0px;
+  padding-right: 2px;
+  transform: translateY(1px);
+  filter: brightness(0%);
 }
 
 @keyframes fade-in-canvas{

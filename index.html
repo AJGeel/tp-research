@@ -30,7 +30,7 @@
     <div class="canvas">
         <div class="column profile-overview">
             <!-- <img class="profile-picture" src="https://via.placeholder.com/1000/FFFFFF/1D5BA3?Text=Persona"></img> -->
-            <img class="profile-picture" src="i/profile-picture-lucas.jpg"></img>
+            <img class="profile-picture" src="i/profile-video-500x500.gif"></img>
             <h1>"The Cautious Connaisseur"</h1>
 
             <h2>Lucas van Summeren</h2>
@@ -40,11 +40,11 @@
             <p>Location: Breda, the Netherlands</p>
         </div>
         <div class="column">
-            <div class="quote" style="margin-bottom: 20px;">I don't have a lot of opportunities to try different brews.. So when I buy something, it better be good.</div>
-            <div class="quote">I enjoy variety in the types of beers I drink. I like the relaxing aspect of deconstructing flavours after a stressful day at work.</div>
+            <div class="quote audible" id="q_01" style="margin-bottom: 20px;">I don't have a lot of opportunities to try different brews.. So when I buy something, it better be good. <img src="i/audio-fill.png"/></div>
+            <div class="quote audible" id="q_02">I enjoy variety in the types of beers I drink. I like the relaxing aspect of deconstructing flavours after a stressful day at work. <img src="i/audio-fill.png"/></div>
 
             <h2>About Lucas</h2>
-            <p>Lucas has a <a href="#!" class="audio-proof">busy life</a>. Between his nine-to-five job and the ongoing renovations in his house, he does not have a lot of free time to work with. He won't settle for beers that simply are 'okay' or ones he has drank plenty of times &mdash; he's actively searching for fresh, new ales to try.</p>
+            <p>Lucas has a <a href="#!" class="audible" id="q_03">busy life <img src="i/audio-fill.png"/>.</a> Between his nine-to-five job and the ongoing renovations in his house, he does not have a lot of free time to work with. He won't settle for beers that simply are 'okay' or ones he has drank plenty of times &mdash; he's actively searching for fresh, new ales to try.</p>
 
             <h2>Behavioural Considerations</h2>
             <ul>
@@ -76,7 +76,11 @@
         </div>
     </div>
 
-    <p class="disclaimer">This 'behavioural' persona is based on Harley's framework, retrieved from <a href="https://www.nngroup.com/articles/persona/">https://www.nngroup.com/articles/persona/</a>
+    <p class="disclaimer">This 'behavioural' persona is based on Harley's framework, retrieved from <a href="https://www.nngroup.com/articles/persona/">https://www.nngroup.com/articles/persona/</a></p>
+
+    <audio id="q_01_audio"><source src="audio/q_01.mp3" type="audio/mpeg"></audio>
+    <audio id="q_02_audio"><source src="audio/q_02.mp3" type="audio/mpeg"></audio>
+
 
 
   </body>
@@ -85,24 +89,47 @@
 <script src="src/basicLightbox.min.js"></script>
 
 <script>
+
+var q_01 = document.getElementById('q_01');
+var q_02 = document.getElementById('q_02');
+var q_01_audio = document.getElementById("q_01_audio");
+var q_02_audio = document.getElementById("q_02_audio");
+
+
+q_01.addEventListener("click", function(){
+  toggleAudio(q_01_audio);
+});
+
+q_02.addEventListener("click", function(){
+  toggleAudio(q_02_audio);
+});
+
+function toggleAudio(target){
+  // Function to toggle playback of a HTML5 audio element.
+
+  // Checks if the targeted audio is not currently playing. (.paused = true; .currentTime is more/equal 0 and .ended is false)
+  if (target.paused && target.currentTime >= 0 && !target.ended) {
+    target.play();
+    console.log(`${this} Should start playing.`)
+  } else {
+    // If the targeted audio is already playing, clicking it should pause the playback.
+    target.pause();
+    console.log("Should pause.")
+  }
+}
+
+// BasicLightBox API to create full-screen popups of stakeholder interviews.
 document.querySelector('img.profile-picture').onclick = () => {
     basicLightbox.create(`
     <video controls data-id="2">
-        <source src="https://www.youtube.com/watch?v=IQcYCYSaLe4" type="video/mp4">
+        <source src="i/interview-placeholder.mp4" type="video/mp4">
     </video>
     `).show()
 }
 
-document.querySelector('a.audio-proof').onclick = () => {
-    basicLightbox.create(`
-    <video controls data-id="2">
-        <source src="https://www.youtube.com/watch?v=IQcYCYSaLe4" type="video/mp4">
-    </video>
-    `).show()
-}
 
 document.addEventListener("keypress", function(event) {
-// console.log(event.keyCode);
+// console.log('$DEBUG: KeyPressed = ' + event.keyCode);
 if (event.keyCode == 65 || event.keyCode == 97) {
   console.log("$DEBUG — Going to previous page");
   window.open("briefing.html", target="_self");
