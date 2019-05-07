@@ -138,7 +138,7 @@ li{
   margin-bottom: 6px;
 }
 
-ul li::before{
+.characteristics li::before{
   content: "\2022";
   color: var(--dark-blue);
   font-weight: bold;
@@ -170,6 +170,56 @@ p .audible img{
   padding-right: 2px;
   transform: translateY(1px);
   filter: brightness(0%);
+}
+
+.contact-options{
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.4);
+  padding-top: 20px;
+  opacity: .5;
+  transition: opacity .5s ease-in-out;
+}
+
+.contact-options:hover{
+  opacity: 1;
+}
+
+.contact-options h2{
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.profile-buttons{
+  display: flex;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.profile-buttons{
+  padding-left: 0px;
+}
+
+.profile-buttons li{
+  flex: 1;
+  border: 1px solid white;
+  margin-bottom: 0px;
+  padding: 10px 0px;
+  margin: 0px 6px;
+  opacity: 1;
+  border-radius: 5px;
+  box-shadow: 0px 2px 20px rgba(255,255,255,0);
+
+  transition: background-color .5s ease-in-out, color .5s ease-in-out, box-shadow .5s ease-in-out;
+  /* justify-content: center; TODO FIX VERTICAL ALIGNMENT*/
+}
+
+.profile-buttons li:hover{
+  background-color: #fff;
+  color: #2b68ad;
+  cursor: pointer;
+  box-shadow: 0px 2px 20px rgba(255,255,255,.4);
 }
 
 @keyframes fade-in-canvas{
