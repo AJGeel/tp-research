@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Consent Form</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="src/reset.css" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="src/basicLightbox.min.css">
+
+    <style>
+    .canvas{
+        width: 700px;
+        margin: 0 auto;
+        padding: 40px !important;
+        margin-top: 50px;
+
+        margin-bottom: 100px;
+    }
+
+    p:last-child{
+        margin-bottom: 0px;
+    }
+
+    h1{
+        margin-top: 0px;
+    }
+
+    .thumb-gallery{
+      display: flex;
+      flex-flow: wrap;
+      flex-wrap: nowrap;
+      margin-top: 20px;
+      background-color: #ffffff;
+      padding: 30px;
+      padding-bottom: 24px;
+      box-shadow: inset 0 0 20px rgba(0,0,0,.05);
+      border-radius: 2px;
+    }
+
+    .thumbnail-item{
+      /* border: 1px solid red; */
+      flex: 1;
+      margin: 0px 20px;
+      /* transition: transform .5s ease-in-out; */
+    }
+
+    .thumbnail-item img:hover{
+      transform: translateY(-10px);
+      box-shadow: 0px 20px 40px rgba(0,0,0,.15);
+      cursor: pointer;
+    }
+
+    .thumbnail-item:first-child{
+      margin-left: 0px;
+    }
+
+    .thumbnail-item:last-child{
+      margin-right: 0px;
+    }
+
+    .thumbnail-item img{
+      max-width: 100%;
+      box-shadow: 0px 2px 20px rgba(0,0,0,.1);
+      transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+      border-radius: 2px;
+    }
+
+    .thumbnail-caption{
+      text-align: center;
+      opacity: .5;
+      margin-top: 10px;
+    }
+
+    .column span{
+      /* font-style: italic; */
+      color: var(--dark-blue);
+      text-decoration: underline;
+    }
+
+    .consent-form a{
+      color: var(--deep-blue);
+      text-decoration: underline;
+    }
+
+    .consent-input{
+      /* border-top: 1px solid #6991bf; */
+      margin-top: 50px;
+      background-color: #f0f4f9;
+      padding: 50px;
+    }
+
+    .consent-input input{
+      margin-top: 8px;
+      margin-bottom: 26px;
+      width: 100%;
+      padding: 12px 20px;
+      box-sizing: border-box;
+
+      font-family: "IBM Plex Sans";
+      font-size: 16px;
+      border-radius: 2px;
+      border: none;
+      box-shadow: 0px 2px 25px rgba(0,0,0,.01);
+      transition: all .5s ease-in-out;
+    }
+
+    .consent-input input:focus{
+      outline: initial;
+      box-shadow: 0px 2px 25px rgba(0,0,80,.15);
+    }
+
+    .consent-input .input-checkbox{
+      width: initial;
+      margin-right: 8px;
+    }
+
+    em{
+      font-style: italic;
+    }
+
+    button{
+      width: 100%;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+      background-color: var(--deep-blue);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 2px;
+      box-shadow: 0px 2px 25px rgba(0,0,0,.01);
+    }
+
+    .incomplete{
+      opacity: .5;
+      filter: grayscale(1);
+    }
+
+    button:hover{
+      cursor: pointer;
+    }
+    </style>
+
+
+    <link rel="icon" type="image/ico" href="https://arthurgeel.com/favicon.png" />
+  </head>
+
+    <div class="canvas consent-form">
+
+        <div class="column" style="padding-left:50px">
+
+        <div class="text-center" style="text-align: left; margin-bottom: 50px;">
+          <h1 style="color: var(--deep-blue)">Transformative Practices Research</h1>
+          <h1 style="margin-bottom: 16px; font-size: 22px;">Informed Consent Document</h1>
+          <p id="date_today">Date: </p>
+        </div>
+
+        <h2>Goal of this study</h2>
+        <p>The goal of this study is to evaluate the notion of <em>Living Research</em>, a toolkit for sharing insights gained from user research by focusing on rich storytelling.</p>
+
+        <h2>What we want you to do</h2>
+        <p>If you agree to take part in this study, we ask you to join us in a co-designing session that lasts 60 minutes in total. In this session we ask you to take part in a creative problem solving exercise, which is followed by a discussion of the impact that the provided research deliverables have had on your design process. After this session, we will share the results of this discussion with you, plus a questionnaire for evaluation purposes. We kindly request you to take the time to fill out this evaluation.</p>
+
+        <h2>Confidentiality</h2>
+        <p>All data generated during- and after these sessions will be confidential, and stored securely. In any report that might be published, personally identifiable information will be removed to preserve your privacy. Only the researcher will have access to this data.</p>
+
+        <h2>Participation is voluntary</h2>
+        <p>Participation in this study is completely voluntary. If you decide to participate, you retain the right to withdraw from this study. If you withdraw, no data will be kept for analysis. If you have any concerns regarding your participation, or have any other questions, you are free to contact the researcher of this study. The performing researcher is Arthur Geel.</p>
+        <ul>
+          <li style="list-style-type: initial">You can contact me through e-mail, using <a href="#!">a.j.geel@student.tue.nl</a>.</li>
+          <li style="list-style-type: initial">If you wish to contact an independent party, you may contact Dr. Ir. Javed Khan, through <a href="#!">v.j.khan@tue.nl</a>.</li>
+        </ul>
+
+
+        <div class="consent-input">
+          <h2 style="margin-bottom: 20px">Consent Form</h2>
+
+          <p style="opacity: .6"><em>You declare that you have read all the information above, and have received answers to all questions you may have asked. You consent to take part in this study. You understand that any information you provide will be treated confidentially, and that your identity will remain anonymous in the publication of eventual findings. You understand that the information will be collected and processed in accordance with the <a href="http://www.legislation.gov.uk/ukpga/2018/12/contents/enacted.">Data Protection Act 2018</a>.</em></p>
+
+          <h3>Your name</h3>
+          <input></input>
+
+          <h3>Email Address</h3>
+          <input></input>
+
+          <br>
+
+          <input type="checkbox" class="input-checkbox" id="checkboxConsent">I voluntarily agree to participate in this research study</input>
+          <br>
+
+          <input type="checkbox" class="input-checkbox">I wish to be updated of research results.</input>
+
+          <br>
+          <button id="submit-button" class="incomplete">submit</button>
+        </div>
+
+    </div>
+
+    <script>
+
+    var checkbox_consent = document.getElementById('checkboxConsent');
+    checkbox_consent.addEventListener('click', function(){
+      console.log("checkbox clicked.");
+    });
+
+    var canvas_date_today = document.getElementById('date_today');
+
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if(dd<10) {
+        dd = '0'+dd
+    }
+
+    if(mm<10) {
+        mm = '0'+mm
+    }
+
+    today = mm + '/' + dd + '/' + yyyy;
+    canvas_date_today.innerHTML += today;
+    // document.write(today);
+
+    </script>
+
+  </body>
+
+</html>
